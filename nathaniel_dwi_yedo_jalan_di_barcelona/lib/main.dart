@@ -39,7 +39,49 @@ class GambarJalanBarcelona extends StatelessWidget {
                 fit: BoxFit.cover,
                 ),
                 const SizedBox(height: 16),
-                ],
+              
+                const Text(
+                'Jalan di Barcelona',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              const SizedBox(height: 12),
+              const Divider(indent: 16, endIndent: 16),
+
+              Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                  child: Column(
+                    children: [
+                      Row(
+                        children: const [
+                          Icon(Icons.place, color: Colors.red, size: 20),
+                          SizedBox(width: 8),
+                          Text(
+                            'Lokasi: Barcelona, Spanyol',
+                            style: TextStyle(fontSize: 13, color: Colors.black87),
+                          ),
+                        ],
+                      ),
+                      const SizedBox(height: 8),
+                      Row(
+                        children: const [
+                          Icon(Icons.calendar_month, color: Colors.blue, size: 20),
+                          SizedBox(width: 8),
+                          Text(
+                            'Publikasi: 13 Agustus 2013',
+                            style: TextStyle(fontSize: 13, color: Colors.black87),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+                const SizedBox(height: 12),
+                const Divider(indent: 16, endIndent: 16),
+              ],
             ),
           ),
         ),
@@ -48,41 +90,4 @@ class GambarJalanBarcelona extends StatelessWidget {
     }
   @override
   State<GambarJalanBarcelona> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text(widget.title),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: .center,
-          children: [
-            const Text('You have pushed the button this many times:'),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
-            ),
-          ],
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ),
-    );
-  }
 }
