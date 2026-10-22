@@ -1,4 +1,3 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -34,7 +33,7 @@ class GambarJalanBarcelona extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                Image.asset('gambarJalan.jpg',
+                Image.asset('lib/gambarJalan.jpg',
                 height: 200,
                 fit: BoxFit.cover,
                 ),
@@ -81,13 +80,33 @@ class GambarJalanBarcelona extends StatelessWidget {
                 ),
                 const SizedBox(height: 12),
                 const Divider(indent: 16, endIndent: 16),
-              ],
+             Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: const [
+                  Text(
+                    'Deskripsi',
+                    style: TextStyle(
+                      fontSize: 14,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  SizedBox(height: 6),
+                  Text(
+                    'Sebuah persimpangan jalan di Barcelona, Spanyol. Foto ini menampilkan berbagai kendaraan yang bergerak dalam arah yang berbeda, menciptakan pemandangan yang sibuk dan energik.',
+                    style: TextStyle(
+                      fontSize: 12,
+                      color: Colors.black87,
+                      height: 1.3,
+                    ),
+                  ),
+                ],
+              ),
             ),
-          ),
+          ],
         ),
-        
-      )
-    }
-  @override
-  State<GambarJalanBarcelona> createState() => _MyHomePageState();
+      ),
+    );
+  }
 }
